@@ -1,0 +1,45 @@
+package driverMethodsExamples;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Example1 {
+
+	public static void main(String[] args) 
+	{
+		// create the browser object
+		
+		WebDriver d=new FirefoxDriver();
+
+		// open url
+		d.get("http://www.google.com");
+		
+		// get the title
+		
+		String t = d.getTitle();
+		System.out.println("Title: "+t);
+		
+		//get the current url
+		
+		String url = d.getCurrentUrl();
+		System.out.println("current url: "+url);
+		
+		//navigate to 
+		
+		d.navigate().to("http://www.facebook.com");
+		
+		//url back
+		
+		d.navigate().back();
+		
+		//url forward
+		
+		d.navigate().forward();
+
+		// open gmail
+		
+		d.get("http://www.gmail.com");
+	}
+
+
+}
